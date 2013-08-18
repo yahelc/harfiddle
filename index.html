@@ -63,11 +63,11 @@
 jQuery(function($){
 	$("#harsubmit").click(function(){
 		var post_obj = {
-			"description": "HAR saved from harfiddle.com",
+			"description": "Anonymous HAR saved from harfiddle.com",
 			"public": true,
 			"files": { 
 				"savedhar.harp" : { 
-					"content" : "onInputData(" + $("#pastearea").val() + ");";
+					"content" : "onInputData(" + $("#pastearea").val() + ");"
 					}
 				}
 		};
