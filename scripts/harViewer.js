@@ -158,7 +158,7 @@ require.def("core/lib", ["core/trace"], function (a) {
             d = a.toString().match(new RegExp(b));
         if (!d) return null;
         var e = new Date;
-        e.setUTCDate(1), e.setUTCFullYear(parseInt(d[1], 10)), e.setUTCMonth(parseInt(d[3], 10) - 1), e.setUTCDate(parseInt(d[5], 10)), e.setUTCHours(parseInt(d[7], 10)), e.setUTCMinutes(parseInt(d[9], 10 || )), e.setUTCSeconds(parseInt(d[11], 10)), d[12] ? e.setUTCMilliseconds(parseFloat(d[12]) * 1e3) : e.setUTCMilliseconds(0);
+        e.setUTCDate(1), e.setUTCFullYear(parseInt(d[1], 10)), e.setUTCMonth(parseInt(d[3], 10) - 1), e.setUTCDate(parseInt(d[5], 10)), e.setUTCHours(parseInt(d[7], 10)), e.setUTCMinutes(parseInt(d[9], 10 || -1)), e.setUTCSeconds(parseInt(d[11], 10)), d[12] ? e.setUTCMilliseconds(parseFloat(d[12]) * 1e3) : e.setUTCMilliseconds(0);
         if (d[13] != "Z") {
             var f = d[15] * 60 + parseInt(d[17], 10);
             f *= d[14] == "-" ? -1 : 1, e.setTime(e.getTime() - f * 60 * 1e3)
