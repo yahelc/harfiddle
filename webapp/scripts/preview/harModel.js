@@ -321,6 +321,17 @@ HarModel.validateRequestTimings = function(input)
 }
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+function getAnchorParameters(name)
+{
+    var query = window.location.hash.substring(1);
+    var vars = query.split("&");
+    for (var i=0;i<vars.length;i++) {
+        var pair = vars[i].split("=");
+        if (pair[0] == name)
+            return pair[1];
+    }
+    return null;
+}
 
 HarModel.Loader =
 {
@@ -332,9 +343,9 @@ HarModel.Loader =
         if (baseUrl && baseUrl[baseUrl.length-1] != "/")
             baseUrl += "/";
 
-        var paths = Lib.getURLParameters("path");
-        var callbackName = Lib.getURLParameter("callback");
-        var inputUrls = Lib.getURLParameters("inputUrl");
+        var paths = Lib.getURLParameters("path") || getAnchorParameters("path");
+        var callbackName = Lib.getURLParameter("callback") || getAnchorParameters("callback");
+        var inputUrls = Lib.getURLParameters("inputUrl") || getAnchorParameters("inputUrl");
 
         var urls = [];
         for (var p in paths)
