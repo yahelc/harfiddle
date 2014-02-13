@@ -10,7 +10,7 @@
     <!-- Le styles -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-
+    <style>li { padding-bottom: 1em; </style>
   </head>
 
   <body data-spy="scroll" data-target=".bs-docs-sidebar">
@@ -21,7 +21,7 @@
 <header class="jumbotron subhead" id="overview">
   <div class="container">
     <h1>HAR Fiddle</h1>
-    <p class="lead">Paste your HAR file and get a shareable permalink.</p>
+    <p class="lead">Paste your HAR and get a shareable permalink.</p>
   </div>
 </header>
 
@@ -33,9 +33,16 @@
     <div class="row">
       <div class="span3 bs-docs-sidebar">
         <ul class="nav nav-list bs-docs-sidenav">
-	<li>Your HAR will be stored in an anonymous GitHub Gist.</li>
-	<li>We will not track, view, or store your HAR files otherwise.</li>
+	<li>Your HAR will be stored in an anonymous <a href="https://gist.github.com/" style="display:inline;">GitHub Gist</a>.</li>
+	<li>We will not track, view, or store the contents of your HAR files otherwise.</li>
+	<li>Once submitted, your HAR will be loaded in a slightly modified fork of HAR Viewer <a href="http://harfiddle.com/load.html?inputUrl=https://gist.github.com/anonymous/8978406/raw/d50a127be74fa027278103ff4315f22f22e9de2c/savedhar.harp">Example</a></a></li>
+        <li><strong>Why did you build this?</strong><br>There's no quick way to share, view and analyze HAR that you got from copying from Chrome DevTools. HARViewer existed, but required a URL for your HAR.</li>
+        <li><strong>What is "HAR"?</strong><br><a href="http://www.softwareishard.com/blog/har-12-spec/" style="display:inline">HAR</a> is an HTTP Archive data storage format. It is a JSON-formatted data format that logs a Web browsers request information for a given page load.
+</li> 	
         </ul>
+        <hr>
+        Built by <a href="http://yahel.com/">Yahel Carmon</a><br>
+        Hosted on <a href="https://github.com/yahelc/harfiddle/">Github Pages</a>
       </div>
       <div class="span9">
 
